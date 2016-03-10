@@ -1,5 +1,5 @@
 NAME="unicode-ucd"
-VERSION=6.3.0
+VERSION=8.0.0
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="Unicode Character Database"
@@ -8,13 +8,10 @@ files listing Unicode character properties and related data. It also includes
 data files containing test data for conformance to several important Unicode
 algorithms."
 HOMEPAGE="http://www.unicode.org/ucd/"
-SRC_URI="http://www.unicode.org/Public/zipped/${VERSION}/UCD.zip"
+SRC_URI="http://www.unicode.org/Public/zipped/${VERSION}/UCD.zip#/UCD-${VERSION}.zip"
 SRC_DIR=.
 
-CYGPORT_USE_UNSTABLE_API=1
-src_unpack_hook() {
-	grep -q "${VERSION}" ReadMe.txt || error "version mismatch"
-}
+ARCH=noarch
 
 src_compile() { :; }
 
