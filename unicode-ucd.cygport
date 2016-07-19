@@ -1,5 +1,5 @@
 NAME="unicode-ucd"
-VERSION=8.0.0
+VERSION=9.0.0
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="Unicode Character Database"
