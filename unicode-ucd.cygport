@@ -1,6 +1,6 @@
 NAME="unicode-ucd"
 VERSION=9.0.0
-RELEASE=1
+RELEASE=2
 CATEGORY="Libs"
 SUMMARY="Unicode Character Database"
 DESCRIPTION="The Unicode Character Database (UCD) consists of a number of data
@@ -8,10 +8,18 @@ files listing Unicode character properties and related data. It also includes
 data files containing test data for conformance to several important Unicode
 algorithms."
 HOMEPAGE="http://www.unicode.org/ucd/"
-SRC_URI="http://www.unicode.org/Public/zipped/${VERSION}/UCD.zip#/UCD-${VERSION}.zip"
+SRC_URI="
+	http://unicode.org/Public/zipped/${VERSION}/UCD.zip#/UCD-${VERSION}.zip
+	http://unicode.org/Public/zipped/${VERSION}/Unihan.zip#/Unihan-${VERSION}.zip.dat
+"
 SRC_DIR=.
 
 ARCH=noarch
+
+CYGPORT_USE_UNSTABLE_API=1
+src_unpack_hook() {
+	mv Unihan-${VERSION}.zip.dat Unihan.zip
+}
 
 src_compile() { :; }
 
