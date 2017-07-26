@@ -1,6 +1,6 @@
 NAME="unicode-ucd"
-VERSION=9.0.0
-RELEASE=2
+VERSION=10.0.0
+RELEASE=1
 CATEGORY="Libs"
 SUMMARY="Unicode Character Database"
 DESCRIPTION="The Unicode Character Database (UCD) consists of a number of data
